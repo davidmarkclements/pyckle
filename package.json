@@ -1,0 +1,30 @@
+{
+  "name": "pyckle",
+  "version": "1.0.0",
+  "description": "Picks a file from same-name filenames with different extensions based on preference around esm or cjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap --100",
+    "lint": "standard",
+    "ci": "npm run lint && npm test"
+  },
+  "keywords": [],
+  "author": "David Mark Clements @davidmarkclem",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidmarkclements/pyckle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/davidmarkclements/pyckle/issues"
+  },
+  "homepage": "https://github.com/davidmarkclements/pyckle#readme",
+  "dependencies": {
+    "glob": "^7.1.6",
+    "is-file-esm": "^1.0.0"
+  },
+  "devDependencies": {
+    "standard": "^14.3.4",
+    "tap": "^14.10.8"
+  }
+}
