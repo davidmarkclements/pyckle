@@ -1,6 +1,6 @@
 {
   "name": "pyckle",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Picks a file from same-name filenames with different extensions based on preference around esm or cjs",
   "main": "index.js",
   "scripts": {
