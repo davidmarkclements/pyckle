@@ -2,6 +2,7 @@
 const { promisify } = require('util')
 const glob = promisify(require('glob'))
 const isFileEsm = require('is-file-esm')
+const { realpath } = require('fs').promises
 const assert = require('assert').strict
 
 const DEFAULT_PREFERENCES = {
@@ -12,6 +13,11 @@ const DEFAULT_PREFERENCES = {
 
 async function pyckle (dir, name, preferences = DEFAULT_PREFERENCES) {
   assert(dir, 'dir is required')
+  await assert.doesNotReject(
+    async () => {
+      dir = await realpath(dir)
+    }
+  )
   assert(name, 'name is required')
   assert(preferences, 'preferences must be an object')
   assert.equal(typeof preferences, 'object', 'preferences must be an object')
